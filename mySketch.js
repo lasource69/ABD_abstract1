@@ -37,7 +37,7 @@ draw = () => {
     if (c.y < 0 || c.y > height) c.vy = -c.vy;
     // show
     fill(c.colour);
-    for (let i = 90; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
+    for (let i = 360; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
   }
 
   // Draw the text after drawing the circles
