@@ -1,15 +1,20 @@
 const circleSpeed = 0.0001;
 
 let circles = [];
-const colours = [
-  [255, 200, 20, 2],
+const colours = [  [255, 200, 20, 2],
   [10, 25, 100, 2],
   [50, 100, 255, 2]
 ];
 
+let font;
+
+preload = () => {
+  font = loadFont('Roboto-Regular.ttf');
+};
+
 setup = () => {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 28; i--; ) {
+  for (let i = 14; i--; ) {
     const degree = random(TAU);
     circles.push({
       x: random(width),
@@ -32,12 +37,12 @@ draw = () => {
     if (c.y < 0 || c.y > height) c.vy = -c.vy;
     // show
     fill(c.colour);
-    for (let i = 360; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
+    for (let i = 90; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
   }
 
   // Draw the text after drawing the circles
   textSize(120);
-  textFont("Roboto");
+  textFont(font);
 
   // Set the font and style for "ART BASE"
   textStyle(BOLD);
