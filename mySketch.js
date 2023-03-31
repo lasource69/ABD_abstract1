@@ -2,7 +2,6 @@ const circleSpeed = 0.0001;
 
 let circles = [];
 const colours = [
-onst colours = [
   [255, 200, 20, 2],
   [10, 25, 100, 2],
   [50, 100, 255, 2]
