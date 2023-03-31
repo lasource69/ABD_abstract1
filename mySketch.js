@@ -2,8 +2,8 @@ const circleSpeed = 0.0001;
 
 let circles = [];
 const colours = [
-  [255, 200, 20, 2],
-  [10, 25, 100, 2],
+  [255, 200, 200, 2],
+  [10, 255, 100, 2],
   [50, 100, 255, 2]
 ];
 
@@ -36,19 +36,20 @@ draw = () => {
   }
 
   // Draw the text after drawing the circles
-  textSize(120);
+  let fontSize = min(width, height) * 0.1; // Calculate font size based on the smaller dimension
+  textSize(fontSize);
   textFont("Roboto");
 
   // Set the font and style for "ART BASE"
   textStyle(BOLD);
-  fill(255, 255, 0);
-  text("ART", width * 0.5 - 130, height * 0.5);
-  text("BASE", width * 0.5 - 130, height * 0.5 + 80);
+  fill(0, 0, 0);
+  text("ART", width * 0.5 - fontSize * 1.6, height * 0.5 - fontSize * 0.25);
+  text("BASE", width * 0.5 - fontSize * 1.6, height * 0.5 + fontSize * 0.75);
 
   // Set the font and style for ".digital"
   textStyle(NORMAL);
-  fill(255, 255, 255);
-  text(".digital", width * 0.5 - 80, height * 0.5 + 160);
+  fill(0, 0, 0);
+  text(".digital", width * 0.5 - fontSize * 0.8, height * 0.5 + fontSize * 1.5);
 };
 
 // Handle window resizing
