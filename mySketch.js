@@ -14,7 +14,7 @@ preload = () => {
 
 setup = () => {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 14; i--; ) {
+  for (let i = 28; i--; ) {
     const degree = random(TAU);
     circles.push({
       x: random(width),
