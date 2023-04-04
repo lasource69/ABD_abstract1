@@ -39,19 +39,19 @@ draw = () => {
   }
 
   // Draw the text after drawing the circles
-  textSize(150 * min(width, height) / 1080); // Increase the scaling factor
+  textSize(200 * min(width, height) / 1080); // Increase the scaling factor to 200
   textFont("Roboto");
 
   // Set the font and style for "ART BASE"
   textStyle(BOLD);
   fill(255, 255, 0);
-  text("ART", width * 0.5 - 150 * width / 1920, height * 0.5);
-  text("BASE", width * 0.5 - 150 * width / 1920, height * 0.5 + 100 * height / 1080);
+  text("ART", width * 0.5 - 200 * width / 1920, height * 0.5);
+  text("BASE", width * 0.5 - 200 * width / 1920, height * 0.5 + 120 * height / 1080);
 
   // Set the font and style for ".digital"
   textStyle(NORMAL);
   fill(255, 255, 255);
-  text(".digital", width * 0.5 - 100 * width / 1920, height * 0.5 + 200 * height / 1080);
+  text(".digital", width * 0.5 - 120 * width / 1920, height * 0.5 + 240 * height / 1080);
 };
 
 // Handle window resizing
