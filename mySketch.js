@@ -19,8 +19,8 @@ setup = () => {
     circles.push({
       x: random(width),
       y: random(height),
-      vx: cos(degree) * 4,
-      vy: sin(degree) * 4,
+      vx: cos(degree) * 8,
+      vy: sin(degree) * 8,
       colour: colours[i % 3]
     });
   }
