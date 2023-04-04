@@ -9,7 +9,7 @@ const colours = [
 
 setup = () => {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 6; i--; ) {
+  for (let i = 20; i--; ) {
     const degree = random(TAU);
     circles.push({
       x: random(width),
@@ -32,7 +32,7 @@ draw = () => {
     if (c.y < 0 || c.y > height) c.vy = -c.vy;
     // show
     fill(c.colour);
-    for (let i = 800 * min(width, height) / 1080; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
+    for (let i = 600 * min(width, height) / 1080; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
   }
 
   // Draw the text after drawing the circles
