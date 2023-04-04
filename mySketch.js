@@ -35,23 +35,23 @@ draw = () => {
     if (c.y < 0 || c.y > height) c.vy = -c.vy;
     // show
     fill(c.colour);
-    for (let i = 1200 * min(width, height) / 1080; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
+    for (let i = 800 * min(width, height) / 1080; i > 0; i -= 4) ellipse(c.x, c.y, i, i);
   }
 
   // Draw the text after drawing the circles
-  textSize(120 * min(width, height) / 1080);
+  textSize(150 * min(width, height) / 1080); // Increase the scaling factor
   textFont("Roboto");
 
   // Set the font and style for "ART BASE"
   textStyle(BOLD);
   fill(255, 255, 0);
-  text("ART", width * 0.5 - 130 * width / 1920, height * 0.5);
-  text("BASE", width * 0.5 - 130 * width / 1920, height * 0.5 + 80 * height / 1080);
+  text("ART", width * 0.5 - 150 * width / 1920, height * 0.5);
+  text("BASE", width * 0.5 - 150 * width / 1920, height * 0.5 + 100 * height / 1080);
 
   // Set the font and style for ".digital"
   textStyle(NORMAL);
   fill(255, 255, 255);
-  text(".digital", width * 0.5 - 80 * width / 1920, height * 0.5 + 160 * height / 1080);
+  text(".digital", width * 0.5 - 100 * width / 1920, height * 0.5 + 200 * height / 1080);
 };
 
 // Handle window resizing
